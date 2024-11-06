@@ -1,0 +1,6 @@
+canvas {
+    height: 75vh !important;
+    border-width: 1rem !important;
+    border: 1rem !important;
+    border-color: white;
+}
