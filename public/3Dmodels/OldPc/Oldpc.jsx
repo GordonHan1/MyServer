@@ -15,7 +15,7 @@ export default function Model(props) {
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
-        <group position={[-15, -21, 0]}>
+        <group position={[-20, -21, -10]}>
           <mesh geometry={nodes.Object_5.geometry} material={materials.VoxMaterial_64} />
           <mesh geometry={nodes.Object_6.geometry} material={materials.VoxMaterial_72} />
           <mesh geometry={nodes.Object_7.geometry} material={materials.VoxMaterial_86} />

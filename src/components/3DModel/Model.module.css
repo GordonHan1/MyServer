@@ -1,0 +1,6 @@
+.divclass {
+    max-width: 50%;
+    border-width: 0.1rem;
+    border-color: aliceblue;
+    border-style: solid;
+}
