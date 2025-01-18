@@ -1,5 +1,10 @@
-name = "my-cloudflare-project"
-type = "javascript"
-account_id = "your-account-id"
+name = "vite-react-template"
+account_id = "06740579813f72fcc4dce70ee7eed272"
 workers_dev = true
-build.command = "npm run build"
+
+# Specify the directory where Vite builds your project
+pages_build_output_dir = "dist"
+
+# Define the build command
+[build]
+command = "npm run build"
