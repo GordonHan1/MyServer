@@ -20,6 +20,7 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
+    "@jridgewell/sourcemap-codec": "^1.5.0",
     "@mantine/carousel": "^7.13.4",
     "@mantine/charts": "^7.13.4",
     "@mantine/code-highlight": "^7.13.4",
@@ -36,6 +37,7 @@
     "@mantinex/mantine-logo": "^1.0.1",
     "@react-three/drei": "^9.115.0",
     "@react-three/fiber": "^8.17.10",
+    "@rollup/plugin-inject": "^5.0.5",
     "@tiptap/extension-link": "^2.9.1",
     "@tiptap/pm": "^2.9.1",
     "@tiptap/react": "^2.9.1",
