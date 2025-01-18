@@ -282,7 +282,7 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@eslint/js@^9.12.0", "@eslint/js@^9.9.1", "@eslint/js@9.18.0":
+"@eslint/js@^9.18.0", "@eslint/js@^9.9.1", "@eslint/js@9.18.0":
   version "9.18.0"
   resolved "https://registry.npmjs.org/@eslint/js/-/js-9.18.0.tgz"
   integrity sha512-fK6L7rxcq6/z+AaQMtiFTkvbHkBLNlwyRxHpKawP0x3u9+NC6MQTnFW+AdpwC6gfHTW0051cokQgtTN2FqlxQA==
@@ -364,7 +364,7 @@
   resolved "https://registry.npmjs.org/@humanwhocodes/retry/-/retry-0.4.1.tgz"
   integrity sha512-c7hNEllBlenFTHBky65mhq8WD2kbN9Q6gk0bTk8lSBvc554jpXSkST1iePudpt7+A/AQvuHs9EMqjHDXMY1lrA==
 
-"@ianvs/prettier-plugin-sort-imports@^4.3.1":
+"@ianvs/prettier-plugin-sort-imports@^4.4.1":
   version "4.4.1"
   resolved "https://registry.npmjs.org/@ianvs/prettier-plugin-sort-imports/-/prettier-plugin-sort-imports-4.4.1.tgz"
   integrity sha512-F0/Hrcfpy8WuxlQyAWJTEren/uxKhYonOGY4OyWmwRdeTvkh9mMSCxowZLjNkhwi/2ipqCgtXwwOk7tW0mWXkA==
@@ -440,7 +440,7 @@
     clsx "^2.1.1"
     highlight.js "^11.10.0"
 
-"@mantine/core@^7.13.4", "@mantine/core@>=7.0.0", "@mantine/core@7.16.0":
+"@mantine/core@^7.16.0", "@mantine/core@>=7.0.0", "@mantine/core@7.16.0":
   version "7.16.0"
   resolved "https://registry.npmjs.org/@mantine/core/-/core-7.16.0.tgz"
   integrity sha512-lYYwa4Itz77uC8zQzdiKiKdz9Q01NBOYPZsotIKsP/Zqij0qhpsVxoJ8MK3P8IqFyLfThTMmR4sT1qlGfLTA9Q==
