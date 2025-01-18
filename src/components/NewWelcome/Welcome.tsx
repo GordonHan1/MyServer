@@ -1,6 +1,5 @@
 import { Anchor, Text, Title } from '@mantine/core';
 import classes from './NewWelcome.module.css';
-
 export function NewWelcome() {
   return (
     <>

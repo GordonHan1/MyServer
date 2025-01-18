@@ -6,11 +6,12 @@ import classes from './homepage.module.css'
 export function HomePage() {
   return (
     <>
+    <div className={classes.homepage}>
     <NewWelcome/>
     <div className={classes.modelScreen}>
       <Model/>
     </div>
-    
+    </div>
      {/* <Welcome />
       <ColorSchemeToggle />*/}
     </>
