@@ -6,7 +6,7 @@ import { theme } from './theme';
 
 export default function App() {
   return (
-    <MantineProvider>
+    <MantineProvider theme={theme}>
       <NavbarHeader /> {/* Add navbarHeader here */}
       <Router />
     </MantineProvider>
