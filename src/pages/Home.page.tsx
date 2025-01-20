@@ -48,7 +48,9 @@ export function HomePage() {
                     <SwiperSlide>
                         <div className={classes.feature}>
                             <h2>Another Cool Feature</h2>
-                            <p>Showcase something else here.</p>
+                            <p>Showcase something else here.
+                            No way!
+                            </p>
                         </div>
                     </SwiperSlide>
                 </Swiper>
