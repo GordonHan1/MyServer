@@ -20,6 +20,8 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@jridgewell/sourcemap-codec": "^1.5.0",
     "@mantine/carousel": "^7.13.4",
     "@mantine/charts": "^7.13.4",
@@ -35,6 +37,8 @@
     "@mantine/spotlight": "^7.13.4",
     "@mantine/tiptap": "^7.13.4",
     "@mantinex/mantine-logo": "^1.0.1",
+    "@mui/icons-material": "^6.4.0",
+    "@mui/material": "^6.4.0",
     "@react-three/drei": "^9.115.0",
     "@react-three/fiber": "^8.17.10",
     "@rollup/plugin-inject": "^5.0.5",

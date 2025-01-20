@@ -13,7 +13,7 @@ import { useGLTF } from '@react-three/drei'
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/3Dmodels/Cafe/cafe.gltf')
   return (
-    <group {...props} dispose={null} scale={0.7}>
+    <group {...props} dispose={null} scale={0.5}>
       <group rotation={[-Math.PI / 2, -0.005, -1.6]}>
         <group position={[-40, -40, -30]}>
           <mesh geometry={nodes.Object_5.geometry} material={materials.VoxMaterial_24} />
