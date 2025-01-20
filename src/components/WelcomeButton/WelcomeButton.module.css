@@ -1,0 +1,18 @@
+.welcomebutton {
+    margin: 0 auto;
+    align-self: center;
+    align-items: center;
+    border-radius: 25px;
+    height: 50px;
+    width: 200px;
+}
+
+.welcomebuttondiv{
+    display: flex;
+    margin: 10px auto;
+    align-self: center;
+    align-items: center;
+    justify-items: center;
+    
+
+}

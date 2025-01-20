@@ -1,6 +1,17 @@
 .divclass {
     max-width: 50%;
     border-width: 0.1rem;
-    border-color: aliceblue;
+    border-color: var(--mantine-color-dark-3);
     border-style: solid;
+    border-radius: 25px;
+    margin: 0 auto;          /* Center the div horizontally */
+    height: 60vh;
+}
+
+
+canvas {
+    display: block;          /* Prevent any unnecessary inline spacing */
+    height: 60vh !important;
+    border-width: 1rem !important;
+    margin: 0 auto;
 }
