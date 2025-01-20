@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { useState, useEffect, useRef, Suspense } from 'react';
 import Oldpc from '../../../public/3Dmodels/OldPc/Oldpc.jsx';
+import Cafe from '../../../public/3Dmodels/Cafe/Cafe.jsx';  // Add this import
 import classes from "./Model.module.css";
 
 // Define the type for props, including the callback function
@@ -14,6 +15,7 @@ interface ModelProps {
 
 export function Model({ onInteractionComplete }: ModelProps) {
     const [interactionCount, setInteractionCount] = useState(0);
+    const [currentModel, setCurrentModel] = useState<'oldpc' | 'cafe'>('oldpc');  // Add this state
     const canvasRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
@@ -44,6 +46,12 @@ export function Model({ onInteractionComplete }: ModelProps) {
         });
     };
 
+    const handleModelClick = (event: any) => {
+        event.stopPropagation();  // Prevent the click from triggering other handlers
+        setCurrentModel(prev => prev === 'oldpc' ? 'cafe' : 'oldpc');
+        handleInteraction();
+    };
+
     return (
         <div className={classes.divclass} ref={canvasRef}>
             <Canvas onPointerDown={handleInteraction}>
@@ -51,7 +59,11 @@ export function Model({ onInteractionComplete }: ModelProps) {
                 <ambientLight />
                 <OrbitControls minDistance={45} maxDistance={100} onChange={handleInteraction} />
                 <Suspense fallback={null}>
-                    <Oldpc />
+                    {currentModel === 'oldpc' ? (
+                        <Oldpc onClick={handleModelClick} />
+                    ) : (
+                        <Cafe onClick={handleModelClick} />
+                    )}
                 </Suspense>
             </Canvas>
         </div>
