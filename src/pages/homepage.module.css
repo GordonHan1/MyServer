@@ -25,6 +25,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+/* Custom navigation arrow positioning */
+.carouselContainer :global(.swiper-button-prev),
+.carouselContainer :global(.swiper-button-next) {
+    margin: 0 15px;
 }
 
 .accomplishment, .feature {

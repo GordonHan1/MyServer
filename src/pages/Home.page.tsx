@@ -32,7 +32,6 @@ export function HomePage() {
                     <SwiperSlide>
                         <div className={classes.modelScreen}>
                             <Model onInteractionComplete={handleInteractionComplete} />
-                            <p className={classes.drag}>{message}</p>
                         </div>
                     </SwiperSlide>
 

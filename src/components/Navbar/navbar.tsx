@@ -9,7 +9,7 @@ import classes from './navbar.module.css';
 // import { ColorSchemeToggler } from '../ColorSchemeToggle/ColorSchemeToggler'; // Removed unused import
 import { IconSun, IconMoon } from '@tabler/icons-react';
 import logo from "../../assets/gordonLogo.png";
-import { Link } from 'react-router-dom'; // Make sure this import is correct
+import { Link, useLocation } from 'react-router-dom'; // Added useLocation import
 
 const links = [
   { link: '/landing', label: 'Home' },
@@ -23,11 +23,8 @@ const homeRoute = '/landing';
 
 export function NavbarHeader() {
   const [opened, { toggle }] = useDisclosure(false);
-  // Initialize active state based on current pathname or default to homeRoute
-  // Note: For robust active state highlighting on page load/refresh,
-  // you might need to use `useLocation` from react-router-dom.
-  // For simplicity, we'll keep the click-based update for now.
-  const [active, setActive] = useState(homeRoute); // Default to home route
+  const location = useLocation(); // Get current location
+  const [active, setActive] = useState(location.pathname); // Set active based on current path
 
   const { setColorScheme } = useMantineColorScheme();
   const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
