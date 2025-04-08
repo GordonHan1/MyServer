@@ -8,10 +8,11 @@ import { HomePage } from '@/pages/Home.page';
 import { ColorSchemeToggler } from '../ColorSchemeToggle/ColorSchemeToggler';
 import { IconSun, IconMoon } from '@tabler/icons-react';
 import logo from "../../assets/gordonLogo.png";
+import { Link } from 'react-router-dom';
 
 const links = [
-  { link: '/homepage', label: 'Features' },
-  { link: '/pricing', label: 'Pricing' },
+  { link: '/landing', label: 'Home' },
+  { link: '/blog', label: 'Blog' },
   { link: '/learn', label: 'Learn' },
   { link: '/community', label: 'Community' },
   
