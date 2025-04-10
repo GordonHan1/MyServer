@@ -5,7 +5,7 @@ export function WelcomeButton (){
     return (
         <div className={classes.welcomebuttondiv}>
         <button className={classes.welcomebutton}>
-        See how i made it
+        About Me
         </button>
         </div>
         
