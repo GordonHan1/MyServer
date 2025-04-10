@@ -4,7 +4,7 @@ import { UnderConstruction } from './pages/Underconstruction';
 import { BlogHomePage } from './pages/BlogHome.page';
 import { RootLayout } from './components/Layout/RootLayout'; // Import the layout
 import AboutMe from './pages/AboutMe.page';
-
+import { PortfolioPage } from './pages/Portfolio.page';
 const router = createBrowserRouter([
   {
     // This is the layout route
@@ -36,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: '/aboutme',
         element: <AboutMe />,
+      },
+      {
+        path: '/portfolio',
+        element: <PortfolioPage />,
       },
       // Add other routes that should have the navbar here
     ],

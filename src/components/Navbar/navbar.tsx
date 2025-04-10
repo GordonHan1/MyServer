@@ -13,9 +13,9 @@ import { Link, useLocation } from 'react-router-dom'; // Added useLocation impor
 
 const links = [
   { link: '/landing', label: 'Home' },
+  { link: '/aboutme', label: 'About Me' },
   { link: '/blog', label: 'Blog' },
-  { link: '/learn', label: 'Learn' },
-  { link: '/community', label: 'Community' },
+  { link: '/portfolio', label: 'Portfolio' },
 ];
 
 // Define the home page route consistently
@@ -51,13 +51,14 @@ export function NavbarHeader() {
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
         {/* Wrap logo in a Link component */}
-        <Link to={homeRoute} onClick={() => setActive(homeRoute)}>
+        <Link to={homeRoute} onClick={() => setActive(homeRoute)} className={classes.logoContainer}>
           <img
             src={logo}
             alt="Gordon Logo"
             className={classes.logo}
             // Remove the incorrect onClick handler
           />
+          <p className={classes.logoText}>Gordon Han</p>
         </Link>
         <Group gap={5} visibleFrom="xs">
           {items}

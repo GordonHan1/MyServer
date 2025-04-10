@@ -10,6 +10,7 @@ export function BlogHomePage () {
         <>
          <BlogHomePageWelcome />
 
+        <p style={{ textAlign: 'center' }}>Blog Page not done</p>
 
 
         </>
