@@ -1,38 +1,21 @@
 .header {
     height: rem(56px);
+    margin-top: rem(10px);
     margin-bottom: rem(120px);
     background-color: var(--mantine-color-body);
-    border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+    /* Removed border-bottom for seamless look */
+    border-bottom: none;
   }
   
   .inner {
     height: rem(56px);
     display: flex;
-    justify-content: space-between;
+    /* Center the content */
+    justify-content: center;
     align-items: center;
   }
   
-  .logoContainer {
-    display: flex;
-    align-items: center;
-    gap: rem(8px); /* Add some space between logo and text */
-    text-decoration: none; /* Remove link underline */
-    color: inherit; /* Inherit color from parent or default link styles */
-  }
-  
-  .logoText {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: var(--mantine-font-size-lg); /* Make it a bit larger */
-    margin: 0; /* Remove default paragraph margin */
-    color: inherit; /* Ensure it inherits the link's color */
-  }
-  
-  .logo {
-    height: 40px; /* Adjust size as needed */
-    cursor: pointer;
-    display: block; /* Helps prevent extra space below */
-  }
+  /* Removed .logoContainer, .logoText, .logo classes */
 
   .link {
     display: block;
@@ -41,17 +24,19 @@
     border-radius: var(--mantine-radius-sm);
     text-decoration: none;
     color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
-    font-size: var(--mantine-font-size-sm);
+    /* Increased font size from sm to md */
+    font-size: var(--mantine-font-size-md);
     font-weight: 500;
   
     @mixin hover {
       background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
     }
   
-    [data-mantine-color-scheme] &[data-active] {
-      background-color: var(--mantine-color-blue-filled);
-      color: var(--mantine-color-white);
-    }
+   [data-mantine-color-scheme] &[data-active] {
+    background-color: var(--mantine-color-dark-7);
+    /* Ensure text uses your light cream color */
+    color: var(--mantine-color-dark-0);
+  }
   }
 
   .icon {
@@ -77,4 +62,7 @@
     @mixin dark {
       display: block;
     }
+  }
+
+  .actionicon {
   }

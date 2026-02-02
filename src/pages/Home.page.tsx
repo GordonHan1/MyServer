@@ -54,7 +54,6 @@ export function HomePage() {
                     </SwiperSlide>
                 </Swiper>
             </div>
-            <WelcomeButton />
         </>
     );
 }

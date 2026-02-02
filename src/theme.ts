@@ -1,14 +1,22 @@
 import { createTheme } from '@mantine/core';
 import { MantineThemeOverride } from '@mantine/core';
-
-export const theme: MantineThemeOverride = {
+export const theme = createTheme({
   fontFamily: 'Arial, sans-serif',
-  primaryColor: 'blue', // Set the primary color
-  defaultRadius: 'sm', // Optional: Set default border radius
+  primaryColor: 'blue',
+  defaultRadius: 'sm',
   colors: {
-    dark: ['#d5d7e0', '#acaebf', '#8c8fa3', '#666980', '#4d4f66', '#34354a', '#2b2c3d', '#1d1e30', '#0c0d21', '#01010a'],
+    dark: [
+      '#ffffd6', // 0: Main Text Color
+      '#dcdca0', // 1
+      '#b9b970', // 2
+      '#969640', // 3
+      '#323228', // 4: Inner Lines / Borders (Mantine default for borders)
+      '#2a2a20', // 5
+      '#1a1c1a', // 6
+      '#0e100f', // 7: Main Background Color
+      '#080908', // 8
+      '#020202', // 9
+    ],
   },
-  other: {
-    // Add any custom properties if needed
-  },
-};
+  other: {},
+});
