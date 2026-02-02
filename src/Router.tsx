@@ -12,14 +12,9 @@ const router = createBrowserRouter([
     // Add an error element here for better error handling if needed
     // errorElement: <ErrorPage />,
     children: [
-      // These routes will render inside the RootLayout's <Outlet />
-      {
-        path: '/landing',
-        element: <HomePage />,
-      },
       {
         path: '/', // Consider if you want '/' or '/landing' as the default
-        element: <UnderConstruction />,
+        element: <HomePage />,
       },
       {
         path: '/blog',
