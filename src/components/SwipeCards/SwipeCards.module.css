@@ -1,0 +1,33 @@
+.container {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 240px; 
+    width: 100%;
+}
+
+.resetContainer {
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 20;
+}
+
+.card {
+    position: absolute;
+    height: 233px;
+    width: 175px;
+    transform-origin: bottom;
+    overflow: hidden;
+    border-radius: var(--mantine-radius-md);
+    background-color: var(--mantine-color-white);
+    /* Border to match your theme */
+    border: 4px solid var(--mantine-color-dark-4);
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    user-select: none;
+    pointer-events: none;
+}

@@ -1,7 +1,7 @@
 .header {
     height: rem(56px);
+    margin-top: rem(15px);
     margin-top: rem(10px);
-    margin-bottom: rem(120px);
     background-color: var(--mantine-color-body);
     /* Removed border-bottom for seamless look */
     border-bottom: none;
@@ -17,27 +17,30 @@
   
   /* Removed .logoContainer, .logoText, .logo classes */
 
-  .link {
-    display: block;
-    line-height: 1;
-    padding: rem(8px) rem(12px);
-    border-radius: var(--mantine-radius-sm);
-    text-decoration: none;
-    color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
-    /* Increased font size from sm to md */
-    font-size: var(--mantine-font-size-md);
-    font-weight: 500;
-  
-    @mixin hover {
-      background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
-    }
-  
-   [data-mantine-color-scheme] &[data-active] {
+ .link {
+  display: block;
+  line-height: 1;
+  padding: rem(8px) rem(12px);
+  border-radius: var(--mantine-radius-sm);
+  text-decoration: none;
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+  font-size: rem(20px);
+  font-weight: 500;
+
+  /* Add transition for the smooth color change */
+  transition: color 150ms ease;
+
+  @mixin hover {
+    /* Remove background glow */
+    background-color: transparent;
+    /* Change text color to blue */
+    color: var(--mantine-color-blue-filled);
+  }
+
+  [data-mantine-color-scheme] &[data-active] {
     background-color: var(--mantine-color-dark-7);
-    /* Ensure text uses your light cream color */
-    color: var(--mantine-color-dark-0);
   }
-  }
+}
 
   .icon {
     width: rem(20px);

@@ -12,7 +12,9 @@
     justify-content: center;
     align-items: center;
 }
-
+.WelcomeNote {
+    text-align: center;
+}
 .drag {
     text-align: center;
     margin: 0;

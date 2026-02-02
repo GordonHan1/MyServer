@@ -1,0 +1,70 @@
+.container {
+  height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  
+  /* 1. Vertical Alignment: Start from top */
+  padding-top: 5vw;
+  justify-content: flex-start; /* Or flex-start if you want it very high up */
+  
+  /* 2. Horizontal Alignment: Move to the left */
+  align-items: flex-start; 
+  
+  /* 3. Add Left Spacing ("a bit to the left") */
+  padding-left: 34vw; /* Adjust this % to move it further left or right */
+  
+  background-color: var(--mantine-color-body);
+  color: var(--mantine-color-dark-0);
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  /* 4. STACK THE TEXT: Change from row (default) to column */
+  flex-direction: column; 
+  align-items: flex-start; /* Align text to the left */
+  justify-content: center;
+  gap: 0.5rem;
+  
+  /* Size applied to the whole block */
+  font-size: 48px; /* I increased this slightly for a "Hero" look, change back to 24px if preferred */
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  width: 100%;
+}
+
+.scrollContainer {
+  display: grid;
+  grid-template-areas: "stack";
+  align-items: center;
+  /* 5. Align animated text to the LEFT */
+  justify-items: start; 
+  position: relative;
+}
+
+.ghostText {
+  grid-area: stack;
+  visibility: hidden;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+.animatingText {
+  grid-area: stack;
+  white-space: nowrap;
+  z-index: 1; 
+  width: 100%;
+  /* 6. Text flows Left to Right now */
+  text-align: left; 
+}
+
+.staticText {
+  color: var(--mantine-color-dark-0);
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.highlight {
+  color: var(--mantine-color-blue-filled);
+}

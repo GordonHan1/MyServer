@@ -18,7 +18,7 @@ export function HomePage() {
 
     return (
         <>
-            <NewWelcome />
+            <h1 className={classes.WelcomeNote}> Welcome to my Server!</h1>
             <div className={classes.carouselContainer}>
                 <Swiper
                     modules={[Navigation]}

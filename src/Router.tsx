@@ -5,6 +5,7 @@ import { BlogHomePage } from './pages/BlogHome.page';
 import { RootLayout } from './components/Layout/RootLayout'; // Import the layout
 import AboutMe from './pages/AboutMe.page';
 import { PortfolioPage } from './pages/Portfolio.page';
+import { LandingPage } from './pages/LandingPage';
 const router = createBrowserRouter([
   {
     // This is the layout route
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
     // errorElement: <ErrorPage />,
     children: [
       {
-        path: '/', // Consider if you want '/' or '/landing' as the default
+        path: '/',
         element: <HomePage />,
       },
       {
@@ -21,11 +22,15 @@ const router = createBrowserRouter([
         element: <BlogHomePage />,
       },
       {
-        path: '/learn', // Add placeholder routes if needed
+        path:'/test',
+        element: <LandingPage />,
+      },
+      {
+        path: '/learn', 
         element: <UnderConstruction />,
       },
       {
-        path: '/community', // Add placeholder routes if needed
+        path: '/community', 
         element: <UnderConstruction />,
       },
       {
@@ -36,15 +41,10 @@ const router = createBrowserRouter([
         path: '/portfolio',
         element: <PortfolioPage />,
       },
-      // Add other routes that should have the navbar here
+      // routes that includes the navbar
     ],
   },
-  // You could add other top-level routes here if they
-  // should NOT have the Navbar, e.g., a login page.
-  // {
-  //   path: '/login',
-  //   element: <LoginPage />
-  // }
+  // add pages here if they dont need a navbar!!
 ]);
 
 export function Router() {

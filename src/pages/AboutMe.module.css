@@ -1,0 +1,122 @@
+.container {
+  /* Use the main body background from your theme */
+  background-color: var(--mantine-color-body);
+  min-height: calc(100vh - 56px);
+  margin-top: 100PX;
+}
+
+.card {
+  /* Slightly lighter/different shade for the card background to stand out */
+  background-color: var(--mantine-color-dark-8); 
+  border-color: var(--mantine-color-dark-4); /* seamless border */
+  color: var(--mantine-color-dark-0);
+  width: 100%;
+  margin-bottom: var(--mantine-spacing-md);
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+
+  @media (min-width: 62em) { /* theme.breakpoints.md approx */
+    width: 40%;
+    margin-bottom: 0;
+  }
+}
+
+.profileSection {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.profileImage {
+  display: block;
+  /* Use your "Active" color (dark-4) or a gray for the border */
+  border: 4px solid var(--mantine-color-dark-4); 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nameTitle {
+  color: var(--mantine-color-dark-0);
+}
+
+.roleText {
+  color: var(--mantine-color-dark-2); /* Slightly dimmer cream */
+}
+
+.divider {
+  /* Use your secondary highlight color */
+  border-color: var(--mantine-color-dark-4) !important; 
+}
+
+.socialFooter {
+  /* A darker shade for the footer area of the card */
+  background-color: var(--mantine-color-dark-9);
+  border-radius: 0 0 8px 8px;
+  width: 100%;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contentStack {
+  width: 100%;
+  padding-left: 0;
+  padding-top: var(--mantine-spacing-md);
+
+  @media (min-width: 62em) {
+    width: 60%;
+    padding-left: var(--mantine-spacing-xl);
+    padding-top: 0;
+  }
+}
+
+.portfolioButton {
+  color: var(--mantine-color-dark-0);
+  border-color: var(--mantine-color-dark-0);
+  font-weight: 400;
+  font-size: 13px;
+  height: 40px;
+  border-width: 1px;
+  margin-top: -10px;
+  margin-bottom: -5px;
+  font-family: 'Nunito Sans', sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  
+  /* CHANGE: Remove fixed width or set to auto so text fits */
+  width: auto; 
+  /* Alternatively, if you want a fixed size, increase it to 160px */
+  /* width: 160px; */
+
+  align-self: flex-start;
+
+  &:hover {
+    background-color: var(--mantine-color-dark-4);
+    color: var(--mantine-color-dark-0);
+    border-color: var(--mantine-color-dark-4);
+  }
+}
+
+.sectionTitle {
+  color: var(--mantine-color-dark-0);
+}
+
+.sectionText {
+  color: var(--mantine-color-dark-1);
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.icon {
+  color: var(--mantine-color-dark-1);
+  transition: color 200ms ease;
+  
+  &:hover {
+    color: var(--mantine-color-white); /* Bright white on hover */
+  }
+}

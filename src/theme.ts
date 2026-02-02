@@ -11,7 +11,7 @@ export const theme = createTheme({
       '#b9b970', // 2
       '#969640', // 3
       '#323228', // 4: Inner Lines / Borders (Mantine default for borders)
-      '#2a2a20', // 5
+      '#181818', // 5
       '#1a1c1a', // 6
       '#0e100f', // 7: Main Background Color
       '#080908', // 8
