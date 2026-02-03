@@ -8,8 +8,8 @@ export const theme = createTheme({
     dark: [
       '#ffffd6', // 0: Main Text Color
       '#dcdca0', // 1
-      '#b9b970', // 2
-      '#969640', // 3
+      '#ccccab', // 2
+      '#656555', // 3
       '#323228', // 4: Inner Lines / Borders (Mantine default for borders)
       '#181818', // 5
       '#1a1c1a', // 6
