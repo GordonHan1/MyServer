@@ -8,7 +8,7 @@
   padding-top: 10vh; /* Push it down from the very top */
   
   background-color: var(--mantine-color-body);
-  color: var(--mantine-color-dark-0);
+  color: light-dark(var(--mantine-color-gray-9), var(--mantine-color-dark-0));
   overflow: hidden;
 }
 
@@ -73,13 +73,13 @@
 }
 
 .staticText {
-  color: var(--mantine-color-dark-0);
+  color: light-dark(var(--mantine-color-gray-9), var(--mantine-color-dark-0));
   white-space: nowrap;
   z-index: 2;
 }
 
 .highlight {
-  color: var(--mantine-color-blue-filled);
+  color: var(--mantine-color-mist-6);
 }
 
 .infoText {
@@ -90,15 +90,16 @@
   font-size: 20px;
   font-weight: 500;    /* Optional: Adjust weight */
   margin-top: 0.5rem;  /* Adds space between "I'm Gordon" and this text */
-  color: var(--mantine-color-dimmed); /* Optional: Makes it slightly lighter than the main text */
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dimmed));
 }
 
 .singapore {
-    color: red;
+    color: var(--mantine-color-mist-6);
 }
 
 .mainDescription {
     font-size: 20px;
+    color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-1));
     display: flex;       /* Enables flexbox layout */
     flex-direction: column; /* Stacks items vertically */
 }
@@ -113,7 +114,18 @@
 }
 
 .cardStackAnchor {
+  margin-top: 3.5rem;
   width: 100%;
   height: 300px; /* Match your card container height */
   position: relative;
+  display: flex;
+  flex-direction: column; /* Stacks the cards and text vertically */
+  align-items: center;
+}
+
+.caption {
+  margin-top: 3.5rem;       /* Pushes the text down (Adjust this number as needed) */
+  text-align: center;
+  font-size: 0.9rem;      /* Optional: nice caption styling */
+  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-2));
 }

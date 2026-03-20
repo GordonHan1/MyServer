@@ -6,9 +6,9 @@ import classes from "./SwipeCards.module.css";
 
 // Use your own images here
 const cardData: CardType[] = [
-  { id: 1, url: "/src/assets/slider_2.jpg" }, // Your current profile pic
-  { id: 2, url: "/src/assets/slider_1.png" }, // Placeholder Shoe
-  { id: 3, url: "/src/assets/profile.jpg" }, // Placeholder City
+  { id: 1, url: "/src/assets/slider_1.png" }, // Your current profile pic
+  { id: 2, url: "/src/assets/slider_3.jpg" }, // Placeholder Shoe
+  { id: 3, url: "/src/assets/slider_2.jpg" }, // Placeholder City
 ];
 
 type CardType = {
@@ -93,7 +93,7 @@ const Card = ({
         x,
         opacity,
         rotate,
-        zIndex: isFront ? 10 : depth,
+        zIndex: isFront ? 10 : cards.indexOf(cards.find(c => c.id === id)!),
         cursor: isFront ? "grab" : "default",
         boxShadow: isFront
           ? "0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3)"
@@ -113,11 +113,17 @@ const Card = ({
       whileTap={{ cursor: "grabbing" }}
     >
       <img
-        src={url}
-        alt="Swipe Card"
-        className={classes.image}
-        draggable={false}
-      />
+  src={url}
+  alt="Swipe Card"
+  className={classes.image}
+  draggable={false}
+  // Add this style prop:
+  style={{
+    // This trick forces the browser to keep the image texture active
+    // and prevents it from being flattened into the background card
+    transform: "translateZ(0)", 
+  }}
+/>
     </motion.div>
   );
 };

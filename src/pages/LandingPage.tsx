@@ -7,9 +7,9 @@ const languages = [
   "Hello",
   "Hola",
   "Bonjour",
-  "你好", 
+  "你好",
   "こんにちは",
-  "안녕하세요", 
+  "안녕하세요",
   "Xin chào",
 ];
 
@@ -26,7 +26,7 @@ export function LandingPage() {
   return (
     <div className={classes.container}>
       <div className={classes.contentGroup}>
-        
+
         {/* Left Side: Text */}
         <div className={classes.textWrapper}>
           <div className={classes.scrollContainer}>
@@ -60,18 +60,18 @@ export function LandingPage() {
             <span className={classes.introText}>20yo software developer</span> based in <span className={classes.singapore}>Singapore</span>
           </span>
           <span></span>
-          <span className={classes.mainDescription}> 
+          <span className={classes.mainDescription}>
             <span>I'm passionate about music, photography, and sports.</span>
-            <span>I work on many projects for fun</span>
-            </span>
+          </span>
         </div>
 
         {/* Right Side: Swipe Cards */}
         <div className={classes.cardWrapper}>
-  <div className={classes.cardStackAnchor}>
-    <SwipeCards />
-  </div>
-</div>
+          <div className={classes.cardStackAnchor}>
+            <SwipeCards />
+            <span className={classes.caption}>My cool pics</span>
+          </div>
+        </div>
 
       </div>
     </div>

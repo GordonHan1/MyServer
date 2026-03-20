@@ -17,28 +17,29 @@
   
   /* Removed .logoContainer, .logoText, .logo classes */
 
+ .linksGroup {
+  gap: rem(35px);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid light-dark(rgba(17, 24, 39, 0.12), rgba(231, 233, 236, 0.12));
+ }
+
  .link {
   display: block;
   line-height: 1;
   padding: rem(8px) rem(12px);
   border-radius: var(--mantine-radius-sm);
   text-decoration: none;
-  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+  color: light-dark(var(--mantine-color-gray-8), var(--mantine-color-dark-2));
   font-size: rem(20px);
   font-weight: 500;
 
   /* Add transition for the smooth color change */
-  transition: color 150ms ease;
+  transition: color 150ms ease, background-color 150ms ease;
 
   @mixin hover {
-    /* Remove background glow */
-    background-color: transparent;
-    /* Change text color to blue */
-    color: var(--mantine-color-blue-filled);
-  }
-
-  [data-mantine-color-scheme] &[data-active] {
-    background-color: var(--mantine-color-dark-7);
+    background-color: light-dark(var(--mantine-color-gray-1), rgba(255, 255, 255, 0.04));
+    color: var(--mantine-color-mist-6);
   }
 }
 

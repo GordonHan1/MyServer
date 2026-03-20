@@ -1,21 +1,33 @@
 import { createTheme } from '@mantine/core';
-import { MantineThemeOverride } from '@mantine/core';
+
 export const theme = createTheme({
   fontFamily: 'Arial, sans-serif',
-  primaryColor: 'blue',
+  primaryColor: 'mist',
   defaultRadius: 'sm',
   colors: {
+    mist: [
+      '#eef3f7',
+      '#dbe4ec',
+      '#c2d0dc',
+      '#a3b7c7',
+      '#839db1',
+      '#6c879d',
+      '#577084',
+      '#465b6b',
+      '#364653',
+      '#27343e',
+    ],
     dark: [
-      '#ffffd6', // 0: Main Text Color
-      '#dcdca0', // 1
-      '#ccccab', // 2
-      '#656555', // 3
-      '#323228', // 4: Inner Lines / Borders (Mantine default for borders)
-      '#181818', // 5
-      '#1a1c1a', // 6
-      '#0e100f', // 7: Main Background Color
-      '#080908', // 8
-      '#020202', // 9
+      '#e7e9ec', // 0: main text color
+      '#cdd2d8', // 1: secondary text
+      '#aab2bc', // 2: muted text
+      '#6c7580', // 3: disabled text / soft dividers
+      '#3a424b', // 4: borders and inner lines
+      '#23282e', // 5: elevated surfaces
+      '#1c2025', // 6: panels
+      '#15181c', // 7: base background
+      '#101215', // 8: deeper background
+      '#0a0c0e', // 9: darkest background
     ],
   },
   other: {},

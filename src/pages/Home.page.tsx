@@ -4,9 +4,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import { NewWelcome } from '@/components/NewWelcome/Welcome.js';
 import { Model } from '../components/3DModel/Model.js';
-import { WelcomeButton } from '@/components/WelcomeButton/WelcomeButton.js';
 import classes from './homepage.module.css';
 
 export function HomePage() {

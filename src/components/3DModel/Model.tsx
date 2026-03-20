@@ -2,8 +2,8 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { useState, useEffect, useRef, Suspense } from 'react';
-import Oldpc from '../../../public/3Dmodels/OldPc/Oldpc.jsx';
-import Cafe from '../../../public/3Dmodels/Cafe/Cafe.jsx';  // Add this import
+import Oldpc from '../../../3Dmodels/OldPc/Oldpc.jsx';
+import Cafe from '../../../3Dmodels/Cafe/Cafe.jsx';  // Add this import
 import classes from "./Model.module.css";
 
 // Define the type for props, including the callback function

@@ -80,7 +80,7 @@ const AboutMe = () => {
                 <Title order={4} fw={700} mb="5px" className={classes.sectionTitle}>
                   Bio
                 </Title>
-                <Divider size="xs" color="rgba(255, 255, 255, 0.1)" mb="5px" />
+                <Divider size="xs" mb="5px" className={classes.divider} />
                 <Text mb="xs" className={classes.sectionText}>
                   I am a passionate and self-driven web developer who is always trying my best to push my limits
                   and learn new things everyday.
@@ -99,7 +99,7 @@ const AboutMe = () => {
                 <Title order={4} fw={700} mb="5px" className={classes.sectionTitle}>
                   Hobbies
                 </Title>
-                <Divider size="xs" color="rgba(255, 255, 255, 0.1)" mb="5px" />
+                <Divider size="xs" mb="5px" className={classes.divider} />
                 <Text className={classes.sectionText}>
                   I like to travel and listen to chill music. Taking scenic photographs is my favourite hobby.
                 </Text>

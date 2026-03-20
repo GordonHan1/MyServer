@@ -10,7 +10,7 @@ import { Link, useLocation } from 'react-router-dom';
 const links = [
   { link: '/', label: 'Home' },
   { link: '/aboutme', label: 'About Me' },
-  { link: '/blog', label: 'Blog' },
+  { link: '/test', label: 'Test' },
   { link: '/portfolio', label: 'Portfolio' },
 ];
 
@@ -40,7 +40,9 @@ export function NavbarHeader() {
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
         <Group gap={30} visibleFrom="xs">
-          {items}
+          <Group gap={30} className={classes.linksGroup}>
+            {items}
+          </Group>
           <Group justify="center">
             <ActionIcon
               onClick={() => setColorScheme(computedColorScheme === 'dark' ? 'light' : 'dark')}
