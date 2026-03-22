@@ -1,0 +1,128 @@
+.carousel {
+  position: relative;
+  width: min(100%, 38rem);
+  overflow: visible;
+}
+
+.frame {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  border: 1px solid light-dark(
+    rgba(15, 23, 42, 0.08),
+    rgba(255, 255, 255, 0.08)
+  );
+  background: light-dark(
+    rgba(248, 250, 252, 0.95),
+    rgba(27, 37, 51, 0.9)
+  );
+  box-shadow: 0 20px 50px -28px rgba(15, 23, 42, 0.55);
+}
+
+.image,
+.placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  object-fit: cover;
+  display: block;
+}
+
+.placeholder {
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  background:
+    radial-gradient(circle at top right, color-mix(in srgb, var(--slide-accent) 30%, transparent), transparent 40%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.7), rgba(148, 163, 184, 0.16)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(226, 232, 240, 0.92));
+}
+
+.placeholderText {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.78);
+  color: var(--mantine-color-white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.1rem 1rem 0.9rem;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
+  color: var(--mantine-color-white);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.arrowButton {
+  position: absolute;
+  bottom: 0.6rem;
+  z-index: 2;
+  color: light-dark(var(--mantine-color-gray-8), var(--mantine-color-dark-0));
+}
+
+.arrowLeft {
+  left: -2.75rem;
+}
+
+.arrowRight {
+  right: -2.75rem;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 0.85rem;
+}
+
+.dot,
+.dotActive {
+  width: 1.8rem;
+  height: 0.28rem;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.35);
+}
+
+.dotActive {
+  background: var(--dot-accent, var(--mantine-color-mist-6));
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    width: min(100%, 24rem);
+  }
+
+  .arrowButton {
+    bottom: 0.55rem;
+  }
+
+  .arrowLeft {
+    left: -0.35rem;
+  }
+
+  .arrowRight {
+    right: -0.35rem;
+  }
+}
