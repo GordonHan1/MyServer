@@ -1,5 +1,5 @@
 .container {
-  height: calc(100vh - 120px);
+  min-height: calc(100dvh - 120px);
   display: flex;
   flex-direction: column;
   /* 1. Center the whole group (Text + Cards) vertically and horizontally */
@@ -9,15 +9,15 @@
   
   background-color: var(--mantine-color-body);
   color: light-dark(var(--mantine-color-gray-9), var(--mantine-color-dark-0));
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .contentGroup {
   display: flex;
   flex-direction: row; /* Put Text and Cards side by side */
   align-items: center; /* Vertically align them to each other */
-  gap: 10rem; /* Space between the Text and the Cards */
-  margin-left: 8vw;
+  gap: 8rem; /* Space between the Text and the Cards */
+  margin-left: 5vw;
   /* Optional: Ensure it doesn't touch edges on small screens */
   max-width: 1200px;
   width: 100%;
@@ -27,6 +27,12 @@
 
 /* Stack them on mobile */
 @media (max-width: 768px) {
+  .container {
+    min-height: auto;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+  }
+
   .contentGroup {
     flex-direction: column;
     align-items: flex-start;
@@ -99,6 +105,7 @@
 
 .mainDescription {
     font-size: 20px;
+    transform: translateY(5rem);
     color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-1));
     display: flex;       /* Enables flexbox layout */
     flex-direction: column; /* Stacks items vertically */

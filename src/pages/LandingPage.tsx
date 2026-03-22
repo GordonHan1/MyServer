@@ -59,9 +59,8 @@ export function LandingPage() {
           <span className={classes.infoText}>
             <span className={classes.introText}>20yo software developer</span> based in <span className={classes.singapore}>Singapore</span>
           </span>
-          <span></span>
           <span className={classes.mainDescription}>
-            <span>I'm passionate about music, photography, and sports.</span>
+            <span>I'm passionate about: </span>
           </span>
         </div>
 

@@ -1,8 +1,12 @@
 .header {
-    height: rem(56px);
-    margin-top: rem(15px);
-    margin-top: rem(10px);
+    height: calc(rem(56px) + rem(10px));
+    padding-top: rem(10px);
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    isolation: isolate;
     background-color: var(--mantine-color-body);
+    backdrop-filter: blur(12px);
     /* Removed border-bottom for seamless look */
     border-bottom: none;
   }
@@ -13,6 +17,7 @@
     /* Center the content */
     justify-content: center;
     align-items: center;
+    padding-inline: rem(8px);
   }
   
   /* Removed .logoContainer, .logoText, .logo classes */
@@ -39,6 +44,56 @@
 
   @mixin hover {
     background-color: light-dark(var(--mantine-color-gray-1), rgba(255, 255, 255, 0.04));
+    color: var(--mantine-color-mist-6);
+  }
+}
+
+.mobileDrawerContent {
+  background-color: var(--mantine-color-body);
+}
+
+.mobileTrigger {
+  margin-left: auto;
+  color: light-dark(var(--mantine-color-gray-9), var(--mantine-color-dark-0));
+}
+
+.mobileDrawerBody {
+  min-height: 100vh;
+  padding-top: rem(12px);
+  background:
+    radial-gradient(circle at top, light-dark(rgba(87, 112, 132, 0.08), rgba(192, 208, 220, 0.06)), transparent 40%),
+    var(--mantine-color-body);
+}
+
+.mobileDrawerHeader {
+  display: flex;
+  justify-content: flex-end;
+  padding: rem(12px) rem(16px) 0;
+}
+
+.mobileBurger {
+  transform: rotate(90deg);
+  transition: transform 200ms ease;
+}
+
+.mobileMenu {
+  min-height: calc(100vh - rem(104px));
+}
+
+.mobileLink {
+  text-decoration: none;
+  color: light-dark(var(--mantine-color-gray-9), var(--mantine-color-dark-0));
+  font-size: rem(32px);
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: color 150ms ease;
+
+  @mixin hover {
+    color: var(--mantine-color-mist-6);
+  }
+
+  [data-mantine-color-scheme] &[data-active] {
     color: var(--mantine-color-mist-6);
   }
 }
@@ -70,3 +125,20 @@
 
   .actionicon {
   }
+
+@media (min-width: 36em) {
+  .inner {
+    justify-content: center;
+    padding-inline: 0;
+  }
+}
+
+@media (max-width: 35.99875em) {
+  .header {
+    background-color: light-dark(rgba(248, 249, 250, 0.78), rgba(21, 24, 28, 0.78));
+  }
+
+  .inner {
+    justify-content: flex-end;
+  }
+}
